@@ -18,5 +18,5 @@ void caesarCipher(char a[100], int shift, char r[100])
             r[i] = a[i]; // non-alphabetic characters remain unchanged
         }
     }
-    // r[strlen(a)] = '\0'; // null-terminate result string
+    r[strlen(a)] = '\0'; // null-terminate result string
 }
