@@ -3,7 +3,7 @@
 int incrementToPrimeDigits(int n)
 {
     int ans = 0;
-    while(n != 0)
+    while(n > 0)
     {
         int k = n % 10;
         k %= 7;
