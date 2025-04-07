@@ -7,7 +7,7 @@ int incrementToPrimeDigits(int n)
     {
         int k = n % 10;
         k %= 7;
-        while(k != 2 || k != 3 || k != 5 || k != 7)
+        while(k != 2 && k != 3 && k != 5 && k != 7)
         {
             k++;
         }
