@@ -9,22 +9,22 @@ void caesarCipher(char a[100], int shift, char r[100])
         {
             if(n > 90)
             {
-                a[i] = 65 + (90 - n);
+                r[i] = 65 + (90 - n);
             }
             else
             {
-                a[i] = n;
+                r[i] = n;
             }
         }
         else if(islower(a[i]))
         {
             if(n > 122)
             {
-                a[i] = 97 + (122 - n);
+                r[i] = 97 + (122 - n);
             }
             else
             {
-                a[i] = n;
+                r[i] = n;
             }
         }
     }
