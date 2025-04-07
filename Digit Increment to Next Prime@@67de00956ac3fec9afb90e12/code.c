@@ -3,6 +3,7 @@
 int incrementToPrimeDigits(int n)
 {
     int ans = 0;
+    int place = 1;
     while(n > 0)
     {
         int k = n % 10;
@@ -11,7 +12,8 @@ int incrementToPrimeDigits(int n)
         {
             k++;
         }
-        ans += k * 10;
+        ans += k * place;
+        place *= 10;
         n /= 10;
     }
 
