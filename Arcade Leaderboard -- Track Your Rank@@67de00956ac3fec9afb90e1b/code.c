@@ -1,6 +1,6 @@
 // Your code here...
 
-void trackPlayerRanks(int *ranked, int n, int *player, int n, int *result)
+void trackPlayerRanks(int *ranked, int n, int *player, int m, int *result)
 {
     int rank = 1;
     int score = 0;
