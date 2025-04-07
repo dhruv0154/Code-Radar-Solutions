@@ -1,31 +1,20 @@
-// Your code here...
+#include <stdlib.h>
 
-void deflateBalloons(int *air, int n)
-{
-    int r = 0;
-    int smallestNumber = 99999;
-    printf("%d \n", n);
+int cmp(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
 
-    for(int i = 0; i < n; i++)
-    {
-        r = 0;
-        smallestNumber = 999999;
-        for(int k = 0; k < n; k++)
-        {
-            if(air[k] < smallestNumber && air[k] > 0) smallestNumber = air[k];
+void deflateBalloons(int *air, int n) {
+    qsort(air, n, sizeof(int), cmp);
+
+    int total = n;
+
+    printf("%d\n", total);  // First count (before any cuts)
+
+    for (int i = 1; i < n; i++) {
+        // If this element is greater than the one before it, it's a new cut level
+        if (air[i] > air[i - 1]) {
+            printf("%d\n", n - i);  // Remaining elements
         }
-        for(int j = 0; j < n; j++)
-        {
-            air[j] -= smallestNumber;
-        }
-
-        for(int s = 0; s < n; s++)
-        {
-            if(air[s] > 0) r++;
-        }
-
-        if(r == 0) return;
-
-        printf("%d \n", r);
     }
 }
