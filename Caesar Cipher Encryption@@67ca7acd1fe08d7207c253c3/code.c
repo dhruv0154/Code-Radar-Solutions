@@ -1,4 +1,5 @@
 // Your code here...
+#include <cctype>
 void caesarCipher(char a[100], int shift, char r[100])
 {
     for(int i = 0; a[i] != '\0'; i++)
