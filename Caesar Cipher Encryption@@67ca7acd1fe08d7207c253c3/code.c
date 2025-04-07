@@ -28,4 +28,6 @@ void caesarCipher(char a[100], int shift, char r[100])
             }
         }
     }
+
+    r[strlen(a)] = '\0';
 }
