@@ -2,31 +2,31 @@
 
 void deflateBallons(int *air, int n)
 {
-    int k = 0;
+    int r = 0;
     int smallestNumber = 99999;
     for(int i = 0; i < n; i++)
     {
-        if(air[i] <= 0) k++;
+        if(air[i] <= 0) r++;
     }
-    printf("%d", k);
+    printf("%d", r);
 
     for(int i = 0; i < n; i++)
     {
-        k = 0;
+        r = 0;
         for(int k = 0; k < n; k++)
         {
-            if(arr[i] < smallestNumber) smallestNumber = arr[i];
+            if(air[i] < smallestNumber) smallestNumber = air[i];
         }
         for(int j = 0; j < n; j++)
         {
-            arr[i] -= smallestNumber;
+            air[i] -= smallestNumber;
         }
 
         for(int s = 0; s < n; s++)
         {
-            if(arr[s] <= 0) n++;
+            if(air[s] <= 0) r++;
         }
 
-        printf("%d", k);
+        printf("%d", r);
     }
 }
