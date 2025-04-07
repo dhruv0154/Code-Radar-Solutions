@@ -1,14 +1,13 @@
 #include <stdlib.h>
+#include <algorithm>
 
 int cmp(const void *a, const void *b) {
     return (*(int *)a - *(int *)b);
 }
 
 void deflateBalloons(int *air, int n) {
-    qsort(air, n, sizeof(int), cmp);
-
+     std::sort(std::begin(air), std::end(air));
     int total = n;
-
     printf("%d\n", total);  // First count (before any cuts)
 
     for (int i = 1; i < n; i++) 
