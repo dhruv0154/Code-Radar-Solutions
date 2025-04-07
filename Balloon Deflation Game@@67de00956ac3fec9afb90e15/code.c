@@ -2,17 +2,17 @@
 
 void deflateBallons(int *air, int n)
 {
-    int n = 0;
+    int k = 0;
     int smallestNumber = 99999;
     for(int i = 0; i < n; i++)
     {
-        if(air[i] <= 0) n++;
+        if(air[i] <= 0) k++;
     }
-    printf("%d", n);
+    printf("%d", k);
 
     for(int i = 0; i < n; i++)
     {
-        n = 0;
+        k = 0;
         for(int k = 0; k < n; k++)
         {
             if(arr[i] < smallestNumber) smallestNumber = arr[i];
@@ -27,6 +27,6 @@ void deflateBallons(int *air, int n)
             if(arr[s] <= 0) n++;
         }
 
-        printf("%d", n);
+        printf("%d", k);
     }
 }
