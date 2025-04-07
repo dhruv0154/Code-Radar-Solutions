@@ -15,11 +15,11 @@ void deflateBalloons(int *air, int n)
         r = 0;
         for(int k = 0; k < n; k++)
         {
-            if(air[i] < smallestNumber) smallestNumber = air[i];
+            if(air[k] < smallestNumber) smallestNumber = air[i];
         }
         for(int j = 0; j < n; j++)
         {
-            air[i] -= smallestNumber;
+            air[j] -= smallestNumber;
         }
 
         for(int s = 0; s < n; s++)
