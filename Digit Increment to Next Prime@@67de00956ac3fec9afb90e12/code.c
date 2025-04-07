@@ -4,7 +4,7 @@ int incrementToPrimeDigits(int n)
 {
     int ans = 0;
     int place = 1;
-    while(n > 0)
+    while(n >= 0)
     {
         int k = n % 10;
         if(k == 5 || k == 3 || k == 7) k += 2;
