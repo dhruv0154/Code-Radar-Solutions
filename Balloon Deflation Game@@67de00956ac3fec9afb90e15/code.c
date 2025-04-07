@@ -1,6 +1,6 @@
 // Your code here...
 
-void deflateBallons(int *air, int n)
+void deflateBalloons(int *air, int n)
 {
     int r = 0;
     int smallestNumber = 99999;
