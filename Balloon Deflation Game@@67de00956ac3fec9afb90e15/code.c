@@ -11,7 +11,7 @@ void deflateBalloons(int *air, int n) {
 
     printf("%d\n", total);  // First count (before any cuts)
 
-    for (int i = 1; i < n; i++) 
+    for (int i = 0; i < n; i++) 
     {
         if(air[i] == 0) return;
         // If this element is greater than the one before it, it's a new cut level
