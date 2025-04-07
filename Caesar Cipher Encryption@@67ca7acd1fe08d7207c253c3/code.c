@@ -7,11 +7,11 @@ void caesarCipher(char a[100], int shift, char r[100])
     {
         if (isupper(a[i]))
         {
-            r[i] = ((a[i] - 'A' + shift) % 26) + 'A'; // handles negative shifts too
+            r[i] = ((a[i] + shift) % 26) + 'A'; // handles negative shifts too
         }
         else if (islower(a[i]))
         {
-            r[i] = ((a[i] - 'a' + shift) % 26) + 'a';
+            r[i] = ((a[i] + shift) % 26) + 'a';
         }
         else
         {
