@@ -8,7 +8,7 @@ void deflateBalloons(int *air, int n)
     {
         if(air[i] <= 0) r++;
     }
-    printf("%d", r);
+    printf("%d \n", r);
 
     for(int i = 0; i < n; i++)
     {
@@ -27,6 +27,6 @@ void deflateBalloons(int *air, int n)
             if(air[s] <= 0) r++;
         }
 
-        printf("%d", r);
+        printf("%d \n", r);
     }
 }
