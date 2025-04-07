@@ -1,34 +1,21 @@
-// Your code here...
 #include <ctype.h>
-#include <string.h>
+
 void caesarCipher(char a[100], int shift, char r[100])
 {
-    for(int i = 0; a[i] != '\0'; i++)
+    for (int i = 0; a[i] != '\0'; i++)
     {
-        int n = a[i] + shift;
-        if(isupper(a[i]))
+        if (isupper(a[i]))
         {
-            if(n > 90)
-            {
-                r[i] = 65 + (90 - n);
-            }
-            else
-            {
-                r[i] = n;
-            }
+            r[i] = ((a[i] - 'A' + shift) % 26 + 26) % 26 + 'A'; // handles negative shifts too
         }
-        else if(islower(a[i]))
+        else if (islower(a[i]))
         {
-            if(n > 122)
-            {
-                r[i] = 97 + (122 - n);
-            }
-            else
-            {
-                r[i] = n;
-            }
+            r[i] = ((a[i] - 'a' + shift) % 26 + 26) % 26 + 'a';
+        }
+        else
+        {
+            r[i] = a[i]; // non-alphabetic characters remain unchanged
         }
     }
-
-    r[strlen(a)] = '\0';
+    r[strlen(a)] = '\0'; // null-terminate result string
 }
