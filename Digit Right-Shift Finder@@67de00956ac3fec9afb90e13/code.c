@@ -2,7 +2,7 @@
 
 int digitRightShift(int n)
 {
-    char* s[40];
+    char s[40];
 
     int size = sprintf(s, "%d", n);
 
