@@ -29,18 +29,19 @@ int mountainPeak(int n)
         {
             peak = false;
             greatest = -1;
+            break;
         }
     }
 
     if(!peak) return greatest;
 
-    for(int j = index; j < size; j++)
+    for(int j = index; j < size - 1; j++)
     {
-        if(j == size - 1) break;
         if(s[j] - '0' < s[j + 1] - '0')
         {
             peak = false;
             greatest = -1;
+            break;
         }
     }
 
