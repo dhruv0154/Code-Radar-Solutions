@@ -1,5 +1,6 @@
 // Your code here...
 #include <stdbool.h>
+#include <stdlib.h> 
 
 int mountainPeak(int n)
 {
