@@ -6,7 +6,7 @@ int digitRightShift(int n)
     char s[40];
 
     int size = sprintf(s, "%d", n);
-    printf("%s", s);
+    printf("%s \n", s);
 
     for(int i = 0; i < size; i++)
     {
