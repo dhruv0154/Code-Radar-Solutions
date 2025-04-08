@@ -15,9 +15,9 @@ int digitRightShift(int n)
             s[size - 1] = temp;
             break;
         }
-        char temp = s[i];
-        s[i] = s[i + 1];
-        s[i + 1] = temp;
+        char temp = s[i + 1];
+        s[i + 1] = s[i];
+        s[i] = temp;
     }
 
     return atoi(s);
