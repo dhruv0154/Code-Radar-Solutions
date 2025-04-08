@@ -16,6 +16,7 @@ int digitRightShift(int n)
             int temp = s[0];
             s[0] = s[size - 1];
             s[size - 1] = temp;
+            return;
         }
         char temp = s[i];
         s[i] = s[i + 1];
