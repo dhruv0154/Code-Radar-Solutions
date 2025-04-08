@@ -6,19 +6,12 @@ int digitRightShift(int n)
     char s[40];
 
     int size = sprintf(s, "%d", n);
-    for(int i = 0; i < size; i++)
+    char c = s[size - 1];
+    for(int i = size - 1; i >= 0; i--)
     {
-        if(i == size - 1)
-        {
-            int temp = s[0];
-            s[0] = s[size - 1];
-            s[size - 1] = temp;
-            break;
-        }
-        char temp = s[i + 1];
-        s[i + 1] = s[i];
-        s[i] = temp;
+       s[i + 1] = s[i];
     }
+    s[0] = c;
 
     return atoi(s);
 }
