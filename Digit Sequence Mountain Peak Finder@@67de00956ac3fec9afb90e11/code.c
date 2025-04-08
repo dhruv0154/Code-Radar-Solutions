@@ -25,7 +25,7 @@ int mountainPeak(int n)
     if (index == 0 || index == size - 1) return -1;
 
 
-    for(int j = index; j >= 0; j++)
+    for(int j = index; j >= 0; j--)
     {
         if(j == 0) break;
         if(s[j] - '0' < s[j - 1] - '0') 
