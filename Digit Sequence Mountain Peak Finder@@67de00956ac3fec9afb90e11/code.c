@@ -5,7 +5,7 @@
 int mountainPeak(int n)
 {
     int greatest = 0;
-    bool peak = false;
+    bool peak = true;
     int index = 0;
 
     char s[50];
