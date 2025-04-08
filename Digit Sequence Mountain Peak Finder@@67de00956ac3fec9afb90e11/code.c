@@ -20,7 +20,7 @@ int mountainPeak(int n)
         }
     }
 
-    for(int j = i; j >= 0; j++)
+    for(int j = index; j >= 0; j++)
     {
         if(j == 0) break;
         if(s[j] - '0' < s[j - 1] - '0') 
@@ -32,7 +32,7 @@ int mountainPeak(int n)
 
     if(!peak) return greatest;
 
-    for(int j = 0; j < size; j++)
+    for(int j = index; j < size; j++)
     {
         if(j == size - 1) return;
         if(s[j] - '0' < s[j + 1] - '0')
