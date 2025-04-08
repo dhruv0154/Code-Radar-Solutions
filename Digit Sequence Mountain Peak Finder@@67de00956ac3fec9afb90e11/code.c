@@ -31,22 +31,22 @@ int mountainPeak(int n)
         if(s[j] - '0' < s[j - 1] - '0') 
         {
             peak = false;
-            greatest = -1;
             break;
         }
     }
 
-    if(!peak) return greatest;
+    if(!peak) return -1;
 
     for(int j = index; j < size - 1; j++)
     {
         if(s[j] - '0' < s[j + 1] - '0')
         {
             peak = false;
-            greatest = -1;
             break;
         }
     }
+
+    if(!peak) return -1;
 
     return greatest;
 }
