@@ -7,6 +7,8 @@ int digitRightShift(int n)
 
     int size = sprintf(s, "%d", n);
 
+    printf("%d", size);
+
     for(int i = 0; i < size; i++)
     {
         if(i == size - 1)
