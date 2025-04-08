@@ -11,6 +11,6 @@ void factorialRange(int start, int end)
             answer *= j;
         }
 
-        printf("%d \n", answer)
+        printf("%d \n", answer);
     }
 }
