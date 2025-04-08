@@ -11,6 +11,8 @@ int mountainPeak(int n)
     char s[50];
 
     int size = sprintf(s, "%d", n);
+
+    if(size < 3) return  -1;
     for(int i = 0; i < size; i++)
     {
         if(s[i] - '0' > greatest)
