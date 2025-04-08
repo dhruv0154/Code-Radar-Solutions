@@ -34,7 +34,7 @@ int mountainPeak(int n)
 
     for(int j = index; j < size; j++)
     {
-        if(j == size - 1) return;
+        if(j == size - 1) break;
         if(s[j] - '0' < s[j + 1] - '0')
         {
             peak = false;
