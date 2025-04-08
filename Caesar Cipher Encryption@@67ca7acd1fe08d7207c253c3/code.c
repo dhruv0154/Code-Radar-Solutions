@@ -7,7 +7,7 @@ void caesarCipher(char a[100], int shift, char r[100])
     {
         if (isupper(a[i]))
         {
-            r[i] = ((a[i] - 'A' + shift) % 26) + 'A'; // handles negative shifts too
+            r[i] = ((a[i] - 'A' + shift) % 26) + 'A'; 
         }
         else if (islower(a[i]))
         {
