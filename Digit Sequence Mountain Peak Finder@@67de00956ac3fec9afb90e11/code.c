@@ -13,9 +13,9 @@ int mountainPeak(int n)
     int size = sprintf(s, "%d", n);
     for(int i = 0; i < size; i++)
     {
-        if(atoi(s[i]) > greatest)
+        if(s[i] - '0' > greatest)
         {
-            greatest = atoi(s[i]);
+            greatest = s[i] - '0';
             index = i;
         }
     }
@@ -23,7 +23,7 @@ int mountainPeak(int n)
     for(int j = i; j >= 0; j++)
     {
         if(j == 0) break;
-        if(atoi(s[j]) < atoi[s[j - 1]]) 
+        if(s[j] - '0' < s[j - 1] - '0') 
         {
             peak = false;
             greatest = -1;
@@ -35,7 +35,7 @@ int mountainPeak(int n)
     for(int j = 0; j < size; j++)
     {
         if(j == size - 1) return;
-        if(atoi(s[j]) < atoi(s[j + 1]))
+        if(s[j] - '0' < s[j + 1] - '0')
         {
             peak = false;
             greatest = -1;
