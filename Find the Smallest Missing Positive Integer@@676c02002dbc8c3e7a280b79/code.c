@@ -1,8 +1,5 @@
 // Your code here...
 #include <stdio.h>
-#include <stdlib.h>
-
-int cmpr(const void* a, const void* b) { return (*(int*)a - *(int*)b); }
 
 int main()
 {
@@ -16,18 +13,24 @@ int main()
         scanf("%d", &arr[i]);
     }
 
-    qsort(arr, n, sizeof(int), cmpr);
-
-    int smallest = 1;
+    for(int i = 0; i < n; i++)
+    {
+        while(arr[i] >= 1 && arr[i] <= n && arr[arr[i] - 1] != arr[i])
+        {
+            int temp = arr[arr[i] - 1];
+            arr[arr[i] - 1] = arr[i];
+            arr[i] = temp;
+        }
+    }
 
     for(int i = 0; i < n; i++)
     {
-       if(arr[i] == smallest)
-       {
-            smallest++;
-       }
-       else if(arr[i] > smallest) break;
+        if(arr[i] != i + 1)
+        {
+            printf("%d", i + 1);
+            return 0;
+        }
     }
 
-    printf("%d", smallest);
+    printf("%d", n + 1);
 }
