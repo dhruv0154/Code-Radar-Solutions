@@ -22,7 +22,7 @@ int main()
         {
             if(arr[i] + arr[j] == target)
             {
-                if(result[k - 1][0] == result[k][0] && result[k - 1][1] == result[k][1]) continue;
+                if(result[k - 1][0] == arr[i] && result[k - 1][1] == arr[j]) continue;
                 result[k][0] = arr[i];
                 result[k][1] = arr[j];
                 k++;
