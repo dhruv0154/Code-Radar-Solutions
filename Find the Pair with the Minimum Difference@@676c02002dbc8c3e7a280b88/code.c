@@ -24,7 +24,7 @@ int main()
     int first = 0;
     int second = 0;
 
-    for(int i = 1; i <= n; i++)
+    for(int i = 1; i < n; i++)
     {
         int curr = arr[i] - arr[i - 1];
 
