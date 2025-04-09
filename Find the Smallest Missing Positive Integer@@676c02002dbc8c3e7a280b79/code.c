@@ -26,7 +26,7 @@ int main()
        {
             smallest++;
        }
-       else break;
+       else if(arr[i] > smallest) break;
     }
 
     printf("%d", smallest);
