@@ -18,7 +18,7 @@ int main()
 
     qsort(arr, n, sizeof(int), cmpr);
 
-    if(arr[0] != 1 && arr[0] > 0)
+    if(arr[0] > 1)
     {
         printf("%d", 1);
         return 0;
