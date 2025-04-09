@@ -19,6 +19,12 @@ int main()
         scanf("%d", &arr[i]);
     }
 
+    if(n == 1)
+    {
+        printf("%d", -1);
+        return 0;
+    }
+
     qsort(arr, n, sizeof(int), cmpr);
     int smallest = 999999;
     int first = 0;
