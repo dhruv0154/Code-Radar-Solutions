@@ -8,11 +8,6 @@ int main()
 {
     int n;
     scanf("%d", &n);
-    if(n == 1 || n == 7)
-    {
-        printf("%d", 1);
-        return 0;
-    }
 
     int arr[100];
 
@@ -23,26 +18,16 @@ int main()
 
     qsort(arr, n, sizeof(int), cmpr);
 
-    if(arr[n - 1] < 1)
-    {
-        printf("%d", 1);
-        return 0;
-    }
+    int smallest = 1;
 
     for(int i = 0; i < n; i++)
     {
-        if(i == n - 1) 
-        {
-            printf("%d", arr[i] + 1);
-            return 0;
-        }
-        if(arr[i] > 0)
-        {
-            if(arr[i] + 1 != arr[i + 1]) 
-            {
-                printf("%d", arr[i] + 1);
-                return 0;
-            }
-        }
+       if(arr[i] == smallest)
+       {
+            smallest++;
+       }
+       else break;
     }
+
+    printf("%d", smallest);
 }
