@@ -22,8 +22,8 @@ int main()
         {
             if(arr[i] + arr[j] == target)
             {
-                arr[k][0] = arr[i];
-                arr[k][1] = arr[j];
+                result[k][0] = arr[i];
+                result[k][1] = arr[j];
                 k++;
             }
         }
