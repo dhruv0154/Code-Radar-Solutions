@@ -8,6 +8,11 @@ int main()
 {
     int n;
     scanf("%d", &n);
+    if(n == 1)
+    {
+        printf("%d", 1);
+        return 0;
+    }
 
     int arr[100];
 
