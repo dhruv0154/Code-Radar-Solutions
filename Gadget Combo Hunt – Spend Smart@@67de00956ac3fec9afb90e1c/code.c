@@ -1,5 +1,5 @@
 // Your code here...
-int maxGadgetSpend(int keyboards[], int n. int headsets[]. int m. int budget)
+int maxGadgetSpend(int keyboards[], int n, int headsets[], int m, int budget)
 {
     int ans = -1;
 
