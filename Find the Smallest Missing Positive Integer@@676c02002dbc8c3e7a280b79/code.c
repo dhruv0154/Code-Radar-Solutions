@@ -18,12 +18,6 @@ int main()
 
     qsort(arr, n, sizeof(int), cmpr);
 
-    if(arr[0] > 1 || arr[0] < 0)
-    {
-        printf("%d", 1);
-        return 0;
-    }
-
     for(int i = 0; i < n; i++)
     {
         if(i == n - 1) 
