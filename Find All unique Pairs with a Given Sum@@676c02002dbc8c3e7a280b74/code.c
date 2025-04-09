@@ -3,7 +3,7 @@
 int main()
 {
     int arr[100];
-    int result[][2];
+    int result[100][2];
 
     int n;
     scanf("%d", &n);
