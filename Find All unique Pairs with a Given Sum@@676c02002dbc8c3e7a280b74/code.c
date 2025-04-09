@@ -18,11 +18,11 @@ int main()
     int k = 0;
     for(int i = 0; i < n; i++)
     {
-        
         for(int j = i + 1; j < n; j++)
         {
             if(arr[i] + arr[j] == target)
             {
+                if(result[k - 1][0] == result[k][0] && result[k - 1][1] == result[k][1]) continue;
                 result[k][0] = arr[i];
                 result[k][1] = arr[j];
                 k++;
